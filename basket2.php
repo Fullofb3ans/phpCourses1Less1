@@ -96,7 +96,28 @@
         <span class="text-muted">Корзина</span>
         <span class="badge badge-secondary badge-pill">2</span>
       </h4>
+
       <ul class="list-group mb-3">
+        <!--Практическая 2.2 #4 -->
+        <?php
+          $book =['idbook' => '1', 'title' => 'Книга1', 'author'=> 'Автор1', 'price'=> 'Цена1', 'description'=> 'Описание1'];
+          $book2 =['idbook' => '2', 'title' => 'Книга2', 'author'=> 'Автор2', 'price'=> 'Цена2', 'description'=> 'Описание2'];
+          $books = [$book, $book2];
+          for ($i=0; $i < count($books); $i++) { 
+            echo "<li class=\"list-group-item d-flex justify-content-between lh-condensed\">
+            <div class=\"col-md-4 mb-4\">
+              <h6 class=\"my-0\">{$books[$i]['title']}</h6>
+              <small class=\"text-muted\">{$books[$i]['description']}</small>
+            </div>
+            <div class=\"col-md-4 mb-4\">
+              <span class=\"text-muted\">{$books[$i]['price']}</span>
+            </div>
+            <div class=\"col-md-2 mb-2\">
+              <span ><a href=\"#delete\" class=\"btn btn-success btn-sm \">Удалить</a></span>
+            </div>
+          </li>";
+          }
+        ?>
         <li class="list-group-item d-flex justify-content-between lh-condensed">
           <div class="col-md-4 mb-4">
             <h6 class="my-0">Название первой книги </h6>
