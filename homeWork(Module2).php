@@ -211,7 +211,7 @@ echo "<div class='calendar'>
         <td>24</td>
         <td>25</td>
     </tr>
-    <tr>
+    <tr> 
         <td>26</td>
         <td>27</td>
         <td>28</td>
