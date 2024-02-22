@@ -26,7 +26,7 @@ function renderPublisher($publishers){
 
 function renderMenu($menu){
 
-} ;
+};
 
 function saveOrder($firstName, $lastName, $email, $address){
     if($firstName && $lastName && $email && $address){
