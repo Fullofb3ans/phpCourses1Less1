@@ -279,8 +279,28 @@ print_r($_SESSION);
 echo $_SESSION['basket'];
 }
 // ПРАКТИЧЕСКАЯ 5.2
-// Select * from book;
-  ?>
+$link = mysqli_connect('localhost', 'root', '', 'eshop');
+if(mysqli_connect_errno()){
+  echo 'trouble';}
+  else {echo 'noTrouble';
+}
+$category = 'категория';
+$dbu = mysqli_query($link, "Select * from book WHERE category = '$category'");
+while ($row = mysqli_fetch_array($dbu)) {
+    printf("ID: %s  Автор: %s  Название: %s  Цена: %s  Описание: %s  Категория: %s", $row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+};
+// $row = mysqli_fetch_array($dbu); 
+// print_r($row);
+
+// $category = 'Категория';
+// getBooksByCategories($category){
+//   $dbu2 = mysqli_query($link, 'Select * from book');
+// }
+// $row = mysqli_fetch_array($dbu2);
+// while ($row = mysqli_fetch_array($dbu2)) {
+//   printf("ID: %s  Автор: %s  Название: %s  Цена: %s  Описание: %s  Категория: %s", $row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+// }
+?>
 
 
     <!-- Optional JavaScript -->
